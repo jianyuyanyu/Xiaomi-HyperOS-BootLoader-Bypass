@@ -18,6 +18,7 @@
  * Environment requirement:
  *   - PHP 8.0+
  *   - OpenSSL Extension
+ *   - Curl Extension
  *   - ADB
  * 
  * @author MlgmXyysd
@@ -339,6 +340,9 @@ $cookies = null;
 if (preg_match("/Cookie=\[(.*)\]/", $headers, $matches)) {
 	$cookies = trim($matches[1]);
 }
+var_dump($data);
+var_dump($cookies);
+exit();
 
 logf("Sending POST request...");
 $res = postApi("unlock/applyBind", array(
